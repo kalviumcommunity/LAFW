@@ -35,12 +35,14 @@ const About = () => {
           <section>
               <h2 className="text-2xl font-semibold text-slate-700 mb-3">Our Commitment</h2>
               <p className="text-slate-600 leading-relaxed">
-                  We are committed to fostering a trustworthy environment. Please review our <Link to="/guidelines" className="text-indigo-600 hover:underline font-medium">Guidelines</Link> and <Link to="/disclaimer" className="text-indigo-600 hover:underline font-medium">Disclaimer</Link> for more information on using the platform safely and effectively.
+                  We are committed to the fostering a trustworthy environment. Please review our <Link to="/guidelines" className="text-indigo-600 hover:underline font-medium">Guidelines</Link> and <Link to="/disclaimer" className="text-indigo-600 hover:underline font-medium">Disclaimer</Link> for more information on using the platform safely and effectively.
               </p>
           </section>
         </div>
       </div>
     </div>
+
+
   );
 };
 

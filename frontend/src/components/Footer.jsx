@@ -35,6 +35,7 @@ const Footer = () => {
             Contact Us
           </Link>
         </nav>
+        
       </div>
     </footer>
   );
