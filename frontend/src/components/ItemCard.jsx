@@ -44,6 +44,7 @@ const ItemCard = ({ item }) => {
                 >
                     View Details
                 </Link>
+                
             </div>
         </div>
     );
