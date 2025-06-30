@@ -1,8 +1,8 @@
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
-require("./config/cloudinaryConfig")
 
 const app = express();
 
@@ -14,12 +14,6 @@ app.use(cors());
 const lostItemRoutes = require("./routes/lostItemRoutes");
 const foundItemRoutes = require("./routes/foundItemRoutes");
 const userRoutes = require("./routes/userRoutes");
-const userReportsRoutes = require("./routes/userReportsRoutes");
-const path = require("path");
-const searchRoutes = require("./routes/items");
-const claimRoutes = require("./routes/claimRoutes");
-const contactRoutes = require("./routes/contactRoutes");
-const dashboardRoutes = require("./routes/dashboardRoutes");
 
 // Connect to MongoDB
 mongoose
@@ -33,13 +27,7 @@ mongoose
 // Define routes
 app.use("/api/lost-items", lostItemRoutes);
 app.use("/api/found-items", foundItemRoutes);
-app.use("/api/users", userRoutes);
-app.use("/api/user", userReportsRoutes);
-app.use("/api", searchRoutes);
-app.use("/api/claims", claimRoutes);
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-app.use("/api/contact", contactRoutes); // <<<--- REGISTER contact routes
-app.use("/api/dashboard", dashboardRoutes); // Register dashboard routes
+app.use("/api/users", userRoutes); // Updated route for consistency
 
 // Root route (optional health check or welcome message)
 app.get("/", (req, res) => {
