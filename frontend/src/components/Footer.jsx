@@ -5,6 +5,7 @@ const Footer = () => {
   const currentYear = '2024'; // Static year
 
   return (
+
     <footer className="bg-slate-800 text-slate-400 mt-auto">
       <div className="container mx-auto px-4 py-8 text-center">
         {/* Copyright Text */}
@@ -22,6 +23,7 @@ const Footer = () => {
           </Link>
           <span className="text-slate-600">|</span>
           <Link
+          
             to="/guidelines"
             className="hover:text-white hover:underline mx-3 transition-colors duration-200"
           >

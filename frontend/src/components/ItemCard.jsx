@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// This is now a purely presentational component.
-// All data (item type, status, colors, links) is passed via props.
+ 
+// DONE
 const ItemCard = ({ item }) => {
     const itemStatus = item.type === 'lost' ? 'Lost' : 'Found';
     const statusColor = item.type === 'lost' ? 'text-red-700 bg-red-100' : 'text-emerald-700 bg-emerald-100';
@@ -19,6 +19,7 @@ const ItemCard = ({ item }) => {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                  />
             </Link>
+
 
             {/* Content Section */}
             <div className="p-4 flex flex-col flex-grow">

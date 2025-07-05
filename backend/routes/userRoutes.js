@@ -10,10 +10,7 @@ const { uploadToCloudinary, deleteFromCloudinary } = require('../utills/cloudina
 
 const router = express.Router();
 
-// --- User Registration ---
-// @route   POST /api/users/
-// @desc    Register new user with profile picture
-// @access  Public
+ 
 router.post(
     "/",
     upload.single("profilePicture"), // Use multer first

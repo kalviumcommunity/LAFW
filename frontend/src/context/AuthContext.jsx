@@ -3,7 +3,7 @@ import React, { createContext, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Use navigate inside provider if needed
 
-// 1. Create the Context
+ 
 const AuthContext = createContext(null);
 
 // Helper function to get initial state from localStorage

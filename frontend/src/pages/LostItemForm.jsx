@@ -6,7 +6,7 @@ const LostItemForm = () => {
         e.preventDefault();
         alert('This is a static form. Submissions are disabled.');
     };
-
+// DONE
     return (
         <div className="bg-slate-50 min-h-[calc(100vh-80px)] px-4 py-12 flex items-center justify-center">
             <div className="bg-white p-8 rounded-lg shadow-sm w-full max-w-3xl">
