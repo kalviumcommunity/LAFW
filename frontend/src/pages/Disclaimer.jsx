@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+// DONE
 const Disclaimer = () => {
   return (
     <div className="bg-slate-50">

@@ -5,8 +5,7 @@ const LostItem = require("../models/LostItem");
 const FoundItem = require("../models/FoundItem");
 const ClaimRequest = require("../models/ClaimRequest");
 
-// GET /api/dashboard
-// Get dashboard data for regular users
+ 
 router.get("/", async (req, res) => {
   try {
     // Get total counts
@@ -52,7 +51,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// GET /api/dashboard/user/:userId
+ 
 // Get dashboard data specific to a user
 router.get("/user/:userId", async (req, res) => {
   const { userId } = req.params;

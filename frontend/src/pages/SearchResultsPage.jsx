@@ -7,7 +7,7 @@ const searchData = [
     { id: 1, type: 'found', name: 'Black Wallet', date: '20 Apr, 2024', description: 'Found a black leather wallet near the bus stop.', imageUrl: '/placeholder-image.png' },
     { id: 2, type: 'lost', name: 'Wallet with student ID', date: '18 Apr, 2024', description: 'Lost my wallet, it is black and has my ID.', imageUrl: '/placeholder-image-2.png' },
 ];
-
+// DONE
 const SearchResultsPage = () => {
     const [searchParams] = useSearchParams();
     const query = searchParams.get('query');

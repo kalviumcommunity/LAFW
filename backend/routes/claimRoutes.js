@@ -2,12 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const ClaimRequest = require('../models/ClaimRequest'); // <<<--- IMPORT the new model
-// Optional: Import FoundItem if you need to check if it exists before saving claim
-// const FoundItem = require('../models/FoundItem');
-
-// @route   POST /api/claims
-// @desc    Submit a claim request for a found item and save to DB
-// @access  Private (should be protected later)
+/
 router.post('/', async (req, res) => {
     // Destructure data from the request body
     const { foundItemId, claimantUserId, claimantName, contactNo, description } = req.body;

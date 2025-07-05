@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-
+// DONE
 const Navbar = () => {
   // Helper for NavLink active class styling
   const getNavLinkClass = ({ isActive }) =>
