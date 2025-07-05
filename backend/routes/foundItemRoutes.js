@@ -89,6 +89,8 @@ router.get('/:id', async (req, res) => {
 });
 
 
+// PUT Endpoint (Keep this as it was)
+// ---------------------------------------------------
 router.put("/:id", async (req, res) => {
     try {
         const updatedItem = await FoundItem.findByIdAndUpdate(
