@@ -2,9 +2,22 @@ import React from 'react';
 
 // This is a static, visual-only representation of the form.
 const FoundItemForm = () => {
+    // Handler for the main submission action (creating a new report)
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert('This is a static form. Submissions are disabled.');
+        alert('This is a static form. "Submit" functionality is disabled.');
+    };
+
+    // Handler for the update action
+    const handleUpdate = () => {
+        alert('This is a static form. "Update" functionality is disabled.');
+    };
+
+    // Handler for the delete action, includes a confirmation dialog
+    const handleDelete = () => {
+        if (window.confirm('Are you sure you want to delete this report? This action cannot be undone.')) {
+            alert('This is a static form. "Delete" functionality is disabled.');
+        }
     };
 
     return (
@@ -44,12 +57,27 @@ const FoundItemForm = () => {
                         </div>
                     </div>
 
-                    <div className="mt-8 pt-5 border-t border-slate-200 flex justify-center">
+                    {/* --- MODIFIED BUTTONS SECTION --- */}
+                    <div className="mt-8 pt-5 border-t border-slate-200 flex flex-wrap justify-center items-center gap-4">
                         <button
                             type="submit"
-                            className="w-full md:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition duration-150 ease-in-out shadow-sm"
+                            className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition duration-150 ease-in-out shadow-sm"
                         >
                             Submit Found Item Report
+                        </button>
+                        <button
+                            type="button" // Use type="button" to prevent form submission
+                            onClick={handleUpdate}
+                            className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out shadow-sm"
+                        >
+                            Update Report
+                        </button>
+                        <button
+                            type="button" // Use type="button" to prevent form submission
+                            onClick={handleDelete}
+                            className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-bold py-2.5 px-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-150 ease-in-out shadow-sm"
+                        >
+                            Delete Report
                         </button>
                     </div>
                 </form>
