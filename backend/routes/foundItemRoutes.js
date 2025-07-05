@@ -91,11 +91,13 @@ router.get('/:id', async (req, res) => {
 
 // PUT Endpoint (Keep this as it was)
 // ---------------------------------------------------
+
 router.put("/:id", async (req, res) => {
     try {
         const updatedItem = await FoundItem.findByIdAndUpdate(
         req.params.id,
         req.body,
+        
         { new: true, runValidators: true } // Options: return updated doc, run schema validation
         );
 

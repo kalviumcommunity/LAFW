@@ -126,15 +126,13 @@ router.get('/:id/matches', async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-  
+
   try {
-    
     const updatedItem = await LostItem.findByIdAndUpdate(
       req.params.id,
       req.body, 
       { new: true, runValidators: true } 
     );
-
     if (!updatedItem) {
       return res.status(404).json({ message: "Lost item not found" });
     }
